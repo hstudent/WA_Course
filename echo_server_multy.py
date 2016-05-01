@@ -11,7 +11,7 @@ def es(conn):
                     break
             sd = data.decode("utf-8")
             print("raw:", data, "str:", sd)
-            if sd == 'close\r\n':
+            if sd == 'close':
                     break;
             conn.send(data)
     conn.close()
